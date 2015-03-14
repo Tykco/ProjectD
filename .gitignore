@@ -15,3 +15,21 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore default OSX system files
+.DS_Store
+
+# Ignore zeus
+zeus.json
+custom_plan.rb
+
+# Ignore config files
+config/database.yml
+.env
+
+# Ignore Solr
+solr/
+
+# Ignore ctags
+.tags
+.tags_sorted_by_file 

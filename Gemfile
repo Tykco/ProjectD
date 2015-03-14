@@ -39,10 +39,31 @@ gem 'grape-jbuilder'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+group :development do
+  gem 'guard-rspec', require: false
+  gem 'rb-readline', require: false
+  gem 'rubocop', require: false
+  gem 'spring-commands-rspec'
+  # linux
+  gem 'libnotify', require: false
+  gem 'rb-inotify', require: false
+  # darwin
+  gem 'rb-fsevent', require: false
+  gem 'terminal-notifier-guard', require: false
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  gem 'dotenv-rails'
+
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'faker'
+
+  gem 'pry-rails'
+  gem 'quiet_assets'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
